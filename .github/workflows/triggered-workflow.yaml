@@ -1,8 +1,6 @@
 name: Secondary workflow
 run-name: ${{ github.actor }}
-on:
-  push:
-    branches: [ main, triggered_worfklow ]
+
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
