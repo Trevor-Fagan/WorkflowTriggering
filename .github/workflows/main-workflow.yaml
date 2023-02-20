@@ -8,3 +8,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "Hey this worked"
+  Trigger-Second-Workflow:
+    runs-on: ubuntu-latest
+    steps:
+      - env:
+          GITHUB_TOKEN: ${{ secrets.MYPAT }}
+        run: |
+        gh workflow run triggered-workflow
