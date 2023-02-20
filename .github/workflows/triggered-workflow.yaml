@@ -1,8 +1,10 @@
 name: Secondary workflow
 run-name: ${{ github.actor }}
 
-on: pull-request
-
+on:
+  pull_request:
+    types: [opened, edited]
+    
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
