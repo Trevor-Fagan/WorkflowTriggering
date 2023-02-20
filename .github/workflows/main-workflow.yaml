@@ -2,7 +2,7 @@ name: Main workflow to trigger other workflows
 run-name: ${{ github.actor }}
 on:
   push:
-    branches: [ main, triggered_worfklow ]
+    branches: [ main, triggered_workflow ]
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
@@ -11,5 +11,5 @@ jobs:
   Trigger-Second-Workflow:
     runs-on: ubuntu-latest
     steps:
-    - run: |
-      gh workflow run triggered-workflow
+      - run: |
+          gh workflow run triggered-workflow
