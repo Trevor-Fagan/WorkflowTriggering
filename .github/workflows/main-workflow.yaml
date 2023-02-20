@@ -11,7 +11,8 @@ jobs:
   Trigger-Second-Workflow:
     runs-on: ubuntu-latest
     steps:
-      - env:
+      - name: Trigger other owrkflow
+        env:
           GH_TOKEN: ${{ secrets.MYPAT }}
-      - run: |
+        run: |
           gh workflow run triggered-workflow
