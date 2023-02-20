@@ -11,6 +11,9 @@ jobs:
   Trigger-Second-Workflow:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v3
+          with:
+            fetch-depth: 0
       - name: Trigger other owrkflow
         env:
           GH_TOKEN: ${{ secrets.MYPAT }}
