@@ -4,6 +4,7 @@ run-name: ${{ github.actor }}
 on:
   pull_request:
     types: [opened, edited]
+  workflow_dispatch:
 
 jobs:
   Explore-GitHub-Actions:
