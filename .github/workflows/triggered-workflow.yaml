@@ -1,13 +1,7 @@
 name: Secondary workflow
 run-name: ${{ github.actor }}
 
-on:
-  manual_dispatch:
-    inputs:
-      environment:
-        description: 'The environment to deploy to'
-        required: false
-        default: 'production'
+on: pull-request
 
 jobs:
   Explore-GitHub-Actions:
